@@ -8,20 +8,22 @@ This project requires python3 and Java environment.
 So please ensure you have installed **python3 (>=3.6)**, **Java (>=8)** and **Android SDK**.
 
 Please run following commands in your PowerShell or CMD prompt in Windows, or shell in *nix/macOS
-```python
-python3 -m pip install -r requirement.txt
+```bash
+ $ python3 -m venv
+ $ source venv
+ $ python3 -m pip install -r requirement.txt
 ```
+
+If you want to verify apk files through VirusTotal, please input your api_key of VirusTotal in assets/virus_total.yaml
 
 ## Usage
 #### 1. Clone COVIDGuardian repo.
-```
-  $ git clone https://github.com/venuetrace/CovidGuardPriv 
+```bash
+  $ git clone https://github.com/covid-guardian/covid-guardian 
 ```
 #### 2. Run main.py
-```python
-
-usage: main.py [-h] -s ANDROID_SDK_PATH [-n PARALLEL_NUMBER] APK_PATH
-
+```
+usage: python main.py [-h] -s ANDROID_SDK_PATH [-n PARALLEL_NUMBER] APK_OR_DIRECTORY_PATH
 ```
 Mandatory arguments:
 * `-s ANDROID_SDK_PATH` is used to set the path to the Android SDK
