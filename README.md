@@ -12,6 +12,8 @@ Please run following commands in your PowerShell or CMD prompt in Windows, or sh
 python3 -m pip install -r requirement.txt
 ```
 
+If you want to verify apk files through VirusTotal, please input your api_key of VirusTotal in assets/virus_total.yaml
+
 ## Usage
 #### 1. Clone COVIDGuardian repo.
 ```
@@ -20,7 +22,7 @@ python3 -m pip install -r requirement.txt
 #### 2. Run main.py
 ```python
 
-usage: main.py [-h] -s ANDROID_SDK_PATH [-n PARALLEL_NUMBER] APK_PATH
+usage: main.py [-h] -s ANDROID_SDK_PATH [-n PARALLEL_NUMBER] APK_OR_DIRECTORY_PATH
 
 ```
 Mandatory arguments:
