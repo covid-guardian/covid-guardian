@@ -15,6 +15,14 @@ Please run following commands in your PowerShell or CMD prompt in Windows, or sh
 ```
 
 If you want to verify apk files through VirusTotal, please input your api_key of VirusTotal in assets/virus_total.yaml
+```text
+api_key: 'your api key'
+```
+
+Since data flow analysis is conducted by [FLowDroid](https://github.com/secure-software-engineering/FlowDroid),
+you can generate your own source and sink list by replacing ```assets/SourcesAndSinks.txt```.
+
+You can also add your own _**sensitive pii keywords**_ into ```assets/pii_keywords```. _**One**_ keyword per line.
 
 ## Usage
 #### 1. Clone COVIDGuardian repo.
