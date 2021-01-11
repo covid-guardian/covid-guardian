@@ -22,7 +22,7 @@ If you want to verify apk files through VirusTotal, please input your api_key of
   $ git clone https://github.com/covid-guardian/covid-guardian 
 ```
 #### 2. Run main.py
-
+ 
 ```
 usage: python main.py [-h] -s ANDROID_SDK_PATH [-n PARALLEL_NUMBER] APK_OR_DIRECTORY_PATH
 
