@@ -11,13 +11,13 @@ class VirusAnalyser:
         self.virus_total_result = {}
 
     def analyse(self, apk_path: str):
-        with open(os.path.join(os.path.dirname(__file__), "assets" + os.path.sep + 'virus_total.yaml'), 'r') as file:
+        with open(os.path.join(os.path.dirname(__file__), "assets" + os.path.sep + 'config.yaml'), 'r') as file:
             result: {} = yaml.load(file, Loader=yaml.FullLoader)
 
         # virus total key
-        api_key = result['api_key']
+        api_key = result['vt_api_key']
         if api_key is None or api_key == "":
-            print("Please add api_key of VirusTotal in assets/virus_total.yaml")
+            print("Please add api_key of VirusTotal in assets/config.yaml")
             return
         # upload
         with open(apk_path, 'rb') as f:

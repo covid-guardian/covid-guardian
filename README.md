@@ -14,9 +14,14 @@ Please run following commands in your PowerShell or CMD prompt in Windows, or sh
  $ python3 -m pip install -r requirement.txt
 ```
 
-If you want to verify apk files through VirusTotal, please input your api_key of VirusTotal in assets/virus_total.yaml
+Then, please fill in the proper absolute path of android sdk in ```assets/config.yaml``` 
 ```text
-api_key: 'your api key'
+sdk: 'path_to_android_sdk'
+```
+
+If you want to verify apk files through VirusTotal, please input your api_key of VirusTotal in ```assets/config.yaml```
+```text
+vt_api_key: 'your api key'
 ```
 
 Since data flow analysis is conducted by [FLowDroid](https://github.com/secure-software-engineering/FlowDroid),
@@ -32,11 +37,10 @@ You can also add your own _**sensitive pii keywords**_ into ```assets/pii_keywor
 #### 2. Run main.py
  
 ```
-usage: python main.py [-h] -s ANDROID_SDK_PATH [-n PARALLEL_NUMBER] APK_OR_DIRECTORY_PATH
+usage: python main.py [-h] [-n PARALLEL_NUMBER] APK_OR_DIRECTORY_PATH
 
 ```
 Mandatory arguments:
-* `-s ANDROID_SDK_PATH` is used to set the path to the Android SDK
 * `APK_PATH` is used to set the path to the APK file or a directory containing APK files
 
 Optional arguments:

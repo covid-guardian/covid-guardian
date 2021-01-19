@@ -5,6 +5,8 @@ import os
 import subprocess
 from itertools import repeat
 
+import yaml
+
 from analyser import Analyser
 
 
@@ -13,14 +15,11 @@ def main():
         description="COVIDGuardian: Multi-thread App Privacy Analysis System for Covid apps")
     parser.add_argument('path', metavar='APK_or_directory', type=str,
                         help='Path to the APK file or a directory containing APK files')
-    parser.add_argument('-s', required=True, metavar='android_sdk_path', type=str,
-                        help='Path to the Android SDK')
     parser.add_argument('-n', metavar='parallel_number', type=str,
                         help='The number of parallel works, default is the number of CPU cores', default=0)
 
     args = parser.parse_args()
     path = args.path
-    sdk = args.s
     number = args.n
     if number == 0:
         number = multiprocessing.cpu_count()
@@ -49,12 +48,20 @@ def main():
         print('file path error')
         exit(1)
 
+    with open(os.path.join(os.path.dirname(__file__), "assets" + os.path.sep + 'config.yaml'), 'r') as file:
+        result: {} = yaml.load(file, Loader=yaml.FullLoader)
+
+    sdk_path = result['sdk']
+    if sdk_path is None or sdk_path == "":
+        print('Please fill in the proper absolute path of Android SDK in assets/config.yaml')
+        exit(1)
+
     folder = os.path.join(os.path.dirname(__file__), "results" + os.path.sep + "flowdroid")
     if not os.path.exists(folder) or not os.path.isdir(folder):
         os.makedirs(folder, 0o777, True)
 
     with multiprocessing.Pool(processes=number) as pool:
-        pool.starmap(run, zip(file_list, repeat(sdk)))
+        pool.starmap(run, zip(file_list, repeat(sdk_path)))
 
 
 def run(path, sdk):
