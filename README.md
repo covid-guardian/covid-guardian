@@ -12,7 +12,7 @@ Please run following commands in your PowerShell or CMD prompt in Windows, or sh
 ```shell
  $ python3 -m venv
  $ source venv
- $ python3 -m pip install -r requirement.txt
+ $ python3 -m pip install -r requirements.txt
 ```
 
 #### 2 Automatic setup
