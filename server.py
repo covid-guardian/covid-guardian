@@ -42,7 +42,6 @@ def index():
     global init_run
     if not init_run:
         init_run = True
-        print('init')
         load_old_tasks()
 
     processing = []
@@ -80,5 +79,12 @@ def analysis(file_path):
 @app.route('/get/<file_name>', methods=['GET'])
 def get_report(file_name=None):
     if file_name is None:
-        return 'empty file name'
-    pass
+        return 'empty name'
+    path = result_dir + os.sep + file_name + '.yaml'
+    if not os.path.exists(path):
+        return 'result not ready'
+
+    with open(path, 'r') as file:
+        result: {} = yaml.load(file, Loader=yaml.FullLoader)
+
+    return render_template('detail.html', result=result)
