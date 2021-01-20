@@ -56,7 +56,7 @@ def index():
     for (dir_path, dir_names, filenames) in os.walk(result_dir):
         for filename in filenames:
             if filename[-4:] == 'yaml':
-                analysis_list.append(filename[:-5])
+                analysis_list.append(filename[:-9])
 
     return render_template('index.html', processing=processing, analysis=analysis_list)
 
@@ -82,17 +82,23 @@ def analysis(file_path):
 def get_report(file_name=None):
     if file_name is None:
         return 'empty name'
-    path = result_dir + os.sep + file_name + '.yaml'
+    path = result_dir + os.sep + file_name + '.apk.yaml'
     if not os.path.exists(path):
         return 'result not ready'
 
     with open(path, 'r') as file:
-        result: {} = yaml.load(file, Loader=yaml.FullLoader)
+        # result: {} = yaml.load(file, Loader=yaml.FullLoader)
+        result = file.read()
 
     flowdroid_path = result_dir + os.sep + 'flowdroid' + os.sep + file_name + '.xml'
 
-    with open(flowdroid_path, 'r') as file:
-        f_context = file.read()
-        flowdroid = xmltodict.parse(f_context)
+    if os.path.exists(flowdroid_path):
 
-    return render_template('detail.html', result=result, flowdroid=flowdroid)
+        with open(flowdroid_path, 'r') as file:
+            f_context = file.read()
+            # flowdroid = xmltodict.parse(f_context)
+    else:
+        # flowdroid = {}
+        f_context = "None"
+
+    return render_template('detail.html', result=result, flowdroid=f_context, name=file_name + '.apk')

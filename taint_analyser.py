@@ -23,6 +23,9 @@ class TaintAnalyser:
             'leaked_keys': self.leak_id_names
         }
 
+    def __init__(self):
+        self.leak_id_names: [str] = []
+
     # using flowdroid
     def __start_flowdroid__(self, apk_path: str, sdk_path: str):
         print("Running Flowdroid")

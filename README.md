@@ -5,15 +5,23 @@ The original results are produced on a workstation with xxx CPU (x cores, x GHz)
 
 ## Setup
 This project requires python3 and Java environment. 
-So please ensure you have installed **python3 (>=3.6)**, **Java (>=8)** and **Android SDK**.
+So please ensure you have installed **python3 (>=3.7)**, **Java (>=8)** and **Android SDK**.
 
+#### 1 Manual setup
 Please run following commands in your PowerShell or CMD prompt in Windows, or shell in *nix/macOS
-```bash
+```shell
  $ python3 -m venv
  $ source venv
  $ python3 -m pip install -r requirement.txt
 ```
 
+#### 2 Automatic setup
+If you are using *nix/macOS system, the script ```setup.sh``` can be used for setting up quickly.
+```shell
+ $ sh setup.sh
+```
+
+## Configuration
 Then, please fill in the proper absolute path of android sdk in ```assets/config.yaml``` 
 ```text
 sdk: 'path_to_android_sdk'
@@ -30,11 +38,14 @@ you can generate your own source and sink list by replacing ```assets/SourcesAnd
 You can also add your own _**sensitive pii keywords**_ into ```assets/pii_keywords```. _**One**_ keyword per line.
 
 ## Usage
-#### 1. Clone COVIDGuardian repo.
+COVIDGuard offers two running modes: __Command line mode__ and __Web mode__.
+
+### 1. Clone COVIDGuardian repo.
 ```bash
   $ git clone https://github.com/covid-guardian/covid-guardian 
 ```
-#### 2. Run main.py
+### 2. Running
+#### 2.1 Command line mode
  
 ```
 usage: python main.py [-h] [-n PARALLEL_NUMBER] APK_OR_DIRECTORY_PATH
@@ -46,5 +57,11 @@ Mandatory arguments:
 Optional arguments:
 * `-h, --help` is used to show the help message and exit
 * `-n PARALLEL_NUMBER` is used to set the number of parallel works, default is the number of CPU cores
-## Example
 
+#### 2.2 Web mode
+You can run the web server by running the script ```server.sh```:
+```bash
+ $ sh server.sh
+```
+
+Then the server will run on the port 5000. Please visit http://localhost:5000 to open the front page.
