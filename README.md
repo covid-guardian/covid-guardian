@@ -1,4 +1,4 @@
-# CovidGuardPriv
+# COVIDGuardian
 This is the artifact accompanying the submission "An Empirical Assessment of Global COVID-19 Contact Tracing Applications".
 
 The original results are produced on a workstation with xxx CPU (x cores, x GHz), x GB RAM, and the operating system is xxx. To reproduce the results, a machine with similar CPUs(~2.10GHz), x GB or larger RAM is required. Running the artifact on a different machine could possibly diverge the execution and lead to different results.   
