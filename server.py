@@ -1,7 +1,9 @@
 import os
 from multiprocessing import get_context, cpu_count
 from multiprocessing.context import Process
+from xml.etree import ElementTree
 
+import xmltodict
 import yaml
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
@@ -87,4 +89,10 @@ def get_report(file_name=None):
     with open(path, 'r') as file:
         result: {} = yaml.load(file, Loader=yaml.FullLoader)
 
-    return render_template('detail.html', result=result)
+    flowdroid_path = result_dir + os.sep + 'flowdroid' + os.sep + file_name + '.xml'
+
+    with open(flowdroid_path, 'r') as file:
+        f_context = file.read()
+        flowdroid = xmltodict.parse(f_context)
+
+    return render_template('detail.html', result=result, flowdroid=flowdroid)
