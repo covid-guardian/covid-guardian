@@ -1,1 +1,14 @@
 Reusable
+
+We are applying for the Reusable badge. This project is fully implemented based on our paper, An Empirical Assessment of
+Global COVID-19 Contact Tracing Applications, with features including static vulnerability analysis, taint analysis and
+virus checking.
+
+We made two running modes: CLI and Web. CLI mode offers a batch analysis that allows users to analyse a set of apps
+concurrently by giving the directory path. Web mode provides a user-friendly web page to upload apps and display results
+on it. Both of two modes are fully featured.
+
+The source codes are fully documented. All classes and functions are written with clean code guidance. We also left
+comments on most of functions to help developers understand the logic.
+
+Therefore, we believe our project deserves a Reusable badge.

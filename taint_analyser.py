@@ -1,14 +1,12 @@
 import os
 import re
 import subprocess
+from xml.etree import ElementTree
 from xml.etree.ElementTree import Element
 
-from androguard.core.analysis.analysis import Analysis, ClassAnalysis, MethodClassAnalysis, FieldClassAnalysis
+from androguard.core.analysis.analysis import Analysis
 from androguard.core.bytecodes import apk
-from androguard.core.bytecodes.axml import ARSCParser
-from androguard.core.bytecodes.dvm import EncodedMethod, DalvikVMFormat, ClassDefItem, EncodedField, EncodedValue
-from androguard.decompiler.decompiler import DecompilerJADX
-from xml.etree import ElementTree
+from androguard.core.bytecodes.dvm import DalvikVMFormat, ClassDefItem, EncodedField, EncodedValue
 
 
 class TaintAnalyser:
@@ -91,8 +89,10 @@ class TaintAnalyser:
             value: EncodedValue = field.get_init_value()
 
             # resource id -> resource name
-            if str(value.get_value()) in resource_ids:
-                self.leak_id_names.append(field.get_name())
+            the_value = str(value.get_value())
+            field_name = field.get_name()
+            if the_value in resource_ids and field_name in keywords:
+                self.leak_id_names.append(field_name)
 
     # search resource ids leaked
     def __analyse_flowdroid_result__(self, result_path):

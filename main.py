@@ -1,5 +1,4 @@
 import argparse
-import concurrent
 import multiprocessing
 import os
 import subprocess
@@ -37,6 +36,7 @@ def main():
 
     file_list: [str] = []
 
+    # load apk files
     if os.path.isdir(path):
         for subdir, dirs, files in os.walk(path):
             for filename in files:
@@ -48,6 +48,7 @@ def main():
         print('file path error')
         exit(1)
 
+    # check the sdk path
     with open(os.path.join(os.path.dirname(__file__), "assets" + os.path.sep + 'config.yaml'), 'r') as file:
         result: {} = yaml.load(file, Loader=yaml.FullLoader)
 
@@ -56,6 +57,7 @@ def main():
         print('Please fill in the proper absolute path of Android SDK in assets/config.yaml')
         exit(1)
 
+    # create working dir
     folder = os.path.join(os.path.dirname(__file__), "results" + os.path.sep + "flowdroid")
     if not os.path.exists(folder) or not os.path.isdir(folder):
         os.makedirs(folder, 0o777, True)

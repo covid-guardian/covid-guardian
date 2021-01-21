@@ -140,7 +140,6 @@ class CodeAnalyser:
         pass
 
     def __analyse_hardcode_keys__(self, a: apk.APK, dx: Analysis):
-        # TODO not quite sure
         # CWE-312 Cleartext Storage
         pass
 
@@ -319,7 +318,6 @@ class CodeAnalyser:
         print("analysing trackers")
         self.trackers: [{str: str}] = []  # [{name : website}]
         # load trackers. We use exodus tracker list: https://etip.exodus-privacy.eu.org/trackers/all
-        # TODO update tracker list from web
         with open(os.path.join(os.path.dirname(__file__), "assets" + os.path.sep + 'trackers.json'), 'r') as file:
             json_obj = json.load(file)
             trackers = json_obj['trackers']
