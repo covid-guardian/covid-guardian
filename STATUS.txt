@@ -1,4 +1,4 @@
-Functional and Reusable
+Available
 
 Our github repository: https://github.com/covid-guardian/covid-guardian/
 
