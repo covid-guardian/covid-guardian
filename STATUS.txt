@@ -2,7 +2,7 @@ Available
 
 Our github repository: https://github.com/covid-guardian/covid-guardian/
 
-We are applying for the Reusable badge. This project is fully implemented based on our paper, An Empirical Assessment of
+We are applying for the Available badge. This project is fully implemented based on our paper, An Empirical Assessment of
 Global COVID-19 Contact Tracing Applications, with features including static vulnerability analysis, taint analysis and
 virus checking.
 
