@@ -101,6 +101,9 @@ class TaintAnalyser:
         root = tree.getroot()
         results: Element = root.find('Results')
         idReg = re.compile(r'\((\d+?)\)')
+        if results is None:
+            return result_tuple
+
         for rs in results:
             rs: Element = rs
             # sink

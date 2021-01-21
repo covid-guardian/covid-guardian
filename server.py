@@ -1,13 +1,11 @@
 import os
-from multiprocessing import get_context, cpu_count
-from multiprocessing.context import Process
-from xml.etree import ElementTree
+from concurrent.futures import ThreadPoolExecutor
+from multiprocessing import cpu_count
 
-import xmltodict
 import yaml
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
-from concurrent.futures import ThreadPoolExecutor
+
 from analyser import Analyser
 
 app = Flask('COVIDGuardian')
@@ -93,10 +91,11 @@ def get_report(file_name=None):
     flowdroid_path = result_dir + os.sep + 'flowdroid' + os.sep + file_name + '.xml'
 
     if os.path.exists(flowdroid_path):
-
+        # x = etree.parse(flowdroid_path)
+        # f_context = etree.tostring(x, pretty_print=True)
         with open(flowdroid_path, 'r') as file:
             f_context = file.read()
-            # flowdroid = xmltodict.parse(f_context)
+        #     flowdroid = xmltodict.parse(f_context)
     else:
         # flowdroid = {}
         f_context = "None"
