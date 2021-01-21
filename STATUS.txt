@@ -1,6 +1,7 @@
 Available
 
 Our github repository: https://github.com/covid-guardian/covid-guardian/
+DOI: https://zenodo.org/badge/latestdoi/323030673
 
 We are applying for the Available badge. This project is fully implemented based on our paper, An Empirical Assessment of
 Global COVID-19 Contact Tracing Applications, with features including static vulnerability analysis, taint analysis and
