@@ -1,0 +1,73 @@
+app:
+  activities_launch_mode:
+    au.gov.health.covidsafe.HomeActivity: standard
+    au.gov.health.covidsafe.PeekActivity: standard
+    au.gov.health.covidsafe.PlotActivity: standard
+    au.gov.health.covidsafe.SelfIsolationDoneActivity: standard
+    au.gov.health.covidsafe.SplashActivity: standard
+    au.gov.health.covidsafe.WebViewActivity: standard
+    au.gov.health.covidsafe.ui.onboarding.OnboardingActivity: standard
+    com.atlassian.mobilekit.module.feedback.FeedbackActivity: standard
+    pub.devrel.easypermissions.AppSettingsDialogHolderActivity: standard
+  allow_backup: false
+  app_name: COVIDSafe
+  debuggable: false
+  min_sdk: '23'
+  package_name: au.gov.health.covidsafe
+  permissions:
+    dangerous:
+    - ACCESS_FINE_LOCATION
+    - BLUETOOTH_ADMIN
+    - BLUETOOTH
+    - INTERNET
+    normal:
+    - REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+    - RECEIVE_BOOT_COMPLETED
+    - FOREGROUND_SERVICE
+    - ACCESS_NETWORK_STATE
+    others: []
+    signature: []
+    signatureOrSystem: []
+  target_sdk: '29'
+  use_cleartext_traffic: false
+  version_code: '17'
+  version_name: 1.0.17
+code_analysis:
+  insecure_certificate_validation: []
+  insecure_random_generator:
+  - Lcom/google/common/hash/Striped64;.retryUpdate
+  - Lokhttp3/internal/ws/WebSocketWriter;.writeControlFrame
+  insecure_webview_implementation: []
+  ip_disclosure:
+  - 0.0.0.0
+  - '::'
+  - 127.0.0.1
+  remote_webview_debugging: []
+  risky_cryptographic_algorithms:
+    improper_encrypt_functions:
+    - Lcom/google/crypto/tink/subtle/AesEaxJce;.encrypt
+    - Lcom/google/crypto/tink/subtle/AesEaxJce;.<init>
+    - Lcom/google/crypto/tink/subtle/AesEaxJce;.decrypt
+    insecure_hash_functions: []
+  sql_hardcoded_secrets: []
+  sql_raw_queries:
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.execSQL
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.execSQL
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.query
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.query
+  trackers: []
+pii_taint_result:
+  leaked_keys: []
+root_analysis:
+  debug_detections: []
+  root_detections: []
+  root_usage: []
+virus_total:
+  md5: fa71c70454e76b22aea1da8bb79bdc64
+  permalink: https://www.virustotal.com/gui/file/1730cff7e599b803fbbb8d19dd23b3fdc88f870088789998ada8fa86d1717e96/detection/f-1730cff7e599b803fbbb8d19dd23b3fdc88f870088789998ada8fa86d1717e96-1611192154
+  resource: 1730cff7e599b803fbbb8d19dd23b3fdc88f870088789998ada8fa86d1717e96
+  response_code: 1
+  scan_id: 1730cff7e599b803fbbb8d19dd23b3fdc88f870088789998ada8fa86d1717e96-1611192154
+  sha1: d06be28540f5f4f8562b822e29c3d08b71daedec
+  sha256: 1730cff7e599b803fbbb8d19dd23b3fdc88f870088789998ada8fa86d1717e96
+  verbose_msg: Scan request successfully queued, come back later for the report
