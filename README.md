@@ -2,26 +2,26 @@
 [![DOI](https://zenodo.org/badge/323030673.svg)](https://zenodo.org/badge/latestdoi/323030673)
 
 
-This is the artifact accompanying the submission "An Empirical Assessment of Global COVID-19 Contact Tracing Applications".
+This is the artifact accompanying the paper "An Empirical Assessment of Global COVID-19 Contact Tracing Applications", accepted by ICSE 2021.
 
 The original results are produced on a workstation with AMD Ryzen 7 3700X CPU (8 cores, 16 threads, 3.6 GHz), 16 GB RAM, and the operating system is Linux Mint 20. To reproduce the results, a machine with similar CPUs(at least 2 cores and 2.10GHz), 4 GB or larger RAM is required. Running the artifact on a different machine could possibly diverge the execution and lead to different results.   
 
 ## Setup
 This project requires python3 and Java environment. 
-So please ensure you have installed **python3 (>=3.7)**, **Java (>=8)** and **Android SDK**.
+So please ensure **Python3 (>=3.7)**, **Java (>=8)**, and **Android SDK** have been installed.
 
-#### 1 Manual setup
-Please run following commands in your PowerShell or CMD prompt in Windows, or shell in *nix/macOS
+#### 1 Quick setup
+If you are using *nix/macOS system, the script ```setup.sh``` can be used for setting up quickly.
+```shell
+ $ sh setup.sh
+```
+
+#### 2 Manual setup
+Please run the following commands in PowerShell or CMD prompt in Windows, or shell in *nix/macOS
 ```shell
  $ python3 -m venv
  $ source venv
  $ python3 -m pip install -r requirements.txt
-```
-
-#### 2 Automatic setup
-If you are using *nix/macOS system, the script ```setup.sh``` can be used for setting up quickly.
-```shell
- $ sh setup.sh
 ```
 
 ## Configuration
@@ -35,8 +35,7 @@ If you want to verify apk files through VirusTotal, please input your api_key of
 vt_api_key: 'your api key'
 ```
 
-Since data flow analysis is conducted by [FLowDroid](https://github.com/secure-software-engineering/FlowDroid),
-you can generate your own source and sink list by replacing ```assets/SourcesAndSinks.txt```.
+You can also generate your own source and sink list by replacing ```assets/SourcesAndSinks.txt```.
 
 You can also add your own _**sensitive pii keywords**_ into ```assets/pii_keywords```. _**One**_ keyword per line.
 
