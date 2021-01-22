@@ -3,27 +3,27 @@ Available
 Our github repository: https://github.com/covid-guardian/covid-guardian/
 DOI: https://zenodo.org/badge/latestdoi/323030673
 
-We are applying for the Available badge. This project is fully implemented based on our paper, An Empirical Assessment of
-Global COVID-19 Contact Tracing Applications, with features including static vulnerability analysis, taint analysis and
+We are applying for the Available badge. The artifacts project fully implemented and has been used in our paper, "An Empirical Assessment of
+Global COVID-19 Contact Tracing Applications", with features including static vulnerability analysis, private information leakage analysis, and
 virus checking.
 
 This project is the first automated security and privacy assessment tool that tests contact tracing apps for security
 weaknesses, malware, embedded trackers and private information leakage. COVIDGuardian outperforms 4
-state-of-the-practice industrial and open-source tools.
+state-of-the-practice industrial and open-source tools. Note that, Although the tool is tailored to focus on contact tracing apps, it can also be adapted to other types of apps with respect to the NLP PII learning context, e.g., by changing the source & sink list or updating the sensitive PII keywords.
 
-We assess the security and privacy status of 40 worldwide Android contact tracing apps. We discover more than 50% of
+With COVIDGuardian, we have assessed the security and privacy status of 40 worldwide Android contact tracing apps. COVIDGuardian discovered that more than 50% of
 the apps pose potential security risks due to: (1) employing cryptographic algorithms that are insecure or not part of
-best practice (72.5%); and (2)storing sensitive information in clear text that could be potentially read by
-attackers (55.0%). Over 40% of apps pose security risks through Manifest weaknesses, e.g., allowing permissions for
-backup (hence, the copying of potentially unencrypted application data). Further, we identify that approximately 75%
+best practice; and (2)storing sensitive information in clear text that could be potentially read by
+attackers. Over 40% of apps pose security risks through Manifest weaknesses, e.g., allowing permissions for
+backup (hence, the copying of potentially unencrypted application data). Further, COVIDGuardian identify that approximately 75%
 of the apps contain at least one tracker, potentially causing privacy violations, i.e., leaks that lead to exposing PII
 to third parties.
 
-We made two running modes: CLI and Web. CLI mode offers a batch analysis that allows users to analyse a set of apps
-concurrently by giving the directory path. Web mode provides a user-friendly web page to upload apps and display results
+We provide two running modes: the CLI mode and the Web mode. CLI mode offers a batch analysis that allows users to analyze a set of apps
+concurrently by giving the directory path. Web mode provides a more user-friendly web page to upload apps and display results
 on it. Both of two modes are fully featured.
 
 The source codes are fully documented. All classes and functions are written with clean code guidance. We also left
-comments on most of functions to help developers understand the logic.
+detailed comments on most of functions to help developers understand the logic.
 
-Therefore, we believe our project deserves a Reusable badge.
+Therefore, we believe our project deserves a Available badge.
