@@ -1,0 +1,27 @@
+Hardware requirements:
+
+The original results are produced on a workstation with
+
+* AMD Ryzen 7 3700X CPU (8 cores, 16 threads, 3.6 GHz)
+* 16 GB RAM
+* Linux Mint 20
+
+To reproduce the results, a machine with
+
+* similar CPUs (at least 2 cores and 2.10GHz)
+* 4 GB or larger RAM
+
+Running the artifact on a different machine could possibly diverge the execution and lead to different results.
+
+Software requirements:
+
+* Python3 (>=3.7)
+* Java (>=8)
+* Android SDK
+* python packages:
+	androguard==3.3.5
+	numpy==1.19.3
+	pyyaml==5.3.1
+	requests==2.25.0
+	Flask==1.1.2
+	xmltodict

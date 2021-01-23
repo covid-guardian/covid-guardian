@@ -1,14 +1,35 @@
 # COVIDGuardian
-[![DOI](https://zenodo.org/badge/323030673.svg)](https://zenodo.org/badge/latestdoi/323030673)
 
 
 This is the artifact accompanying the paper "An Empirical Assessment of Global COVID-19 Contact Tracing Applications", accepted by ICSE 2021.
 
 The original results are produced on a workstation with AMD Ryzen 7 3700X CPU (8 cores, 16 threads, 3.6 GHz), 16 GB RAM, and the operating system is Linux Mint 20. To reproduce the results, a machine with similar CPUs(at least 2 cores and 2.10GHz), 4 GB or larger RAM is required. Running the artifact on a different machine could possibly diverge the execution and lead to different results.   
 
-## Setup
+## Docker Setup
+We offer a docker image for convenience. You can follow one of following instructions to run the docker image.
+
+#### Prebuilt Docker image from DockerHub
+```shell
+ $ docker pull zachgenius/covidguardian
+ $ docker run -it -p 5000:5000 zachgenius/covidguardian:latest
+```
+
+or
+#### Building Image from Dockerfile
+```shell
+ $ git clone https://github.com/covid-guardian/covid-guardian.git
+ $ cd covid-guardian
+ $ docker build -t covidguardian .
+ $ docker run -it -p 5000:5000 covidguardian
+```
+
+Then the docker's port 5000 is bind to the localhost:5000, and you can access the web page via http://localhost:5000.
+
+## Manual Setup
 This project requires python3 and Java environment. 
 So please ensure **Python3 (>=3.7)**, **Java (>=8)**, and **Android SDK** have been installed.
+
+__FIRST__, please move into ```src/```
 
 #### 1 Quick setup
 If you are using *nix/macOS system, the script ```setup.sh``` can be used for setting up quickly.
