@@ -1,0 +1,78 @@
+app:
+  activities_launch_mode:
+    com.google.android.gms.common.api.GoogleApiActivity: standard
+    crc640d713d83950d86f9.ENDeveloperToolsActivity: singleTop
+    crc64234a0fa73bf99aca.InformationAndConsentActivity: singleTop
+    crc64234a0fa73bf99aca.LoadingPageActivity: singleTop
+    crc64234a0fa73bf99aca.QuestionnairePageActivity: singleTop
+    crc64234a0fa73bf99aca.RegisteredActivity: singleTop
+    crc643b024e138a80d2ac.SettingsAbout: singleTop
+    crc643b024e138a80d2ac.SettingsActivity: singleTop
+    crc643b024e138a80d2ac.SettingsHelpActivity: singleTop
+    crc643b024e138a80d2ac.SettingsHowItWorksActivity: singleTop
+    crc64471264127c629303.InitializerActivity: singleTop
+    crc644c829e021839fa99.SettingsWithdrawConsentsActivity: singleTop
+    crc645f1fbe73ebb7b3e1.ForceUpdateActivity: singleTop
+    crc646606394ed7385085.GeneralErrorActivity: singleTop
+    crc646606394ed7385085.TransmissionErrorActivity: singleTop
+    crc647ca3ac64383ede52.WelcomeActivity: singleTop
+    crc647ca3ac64383ede52.WelcomePageConsentsActivity: singleTop
+    crc64e4c4ba9cdf39f437.MessagesActivity: singleTop
+    crc64eb88b827e132ab26.InfectionStatusActivity: singleTop
+    crc64f98dd38067c0c88b.FormAuthenticatorActivity: standard
+    crc64f98dd38067c0c88b.WebAuthenticatorActivity: standard
+    crc64f98dd38067c0c88b.WebAuthenticatorNativeBrowserActivity: singleTop
+    crc64f98dd38067c0c88b.WebViewActivity: standard
+    md52ecc484fd43c6baf7f3301c3ba1d0d0c.AuthUrlSchemeInterceptorActivity: singleTop
+  allow_backup: false
+  app_name: Smitte|stop
+  debuggable: false
+  min_sdk: '23'
+  package_name: com.netcompany.smittestop_exposure_notification
+  permissions:
+    dangerous:
+    - BLUETOOTH
+    - INTERNET
+    - WAKE_LOCK
+    normal:
+    - ACCESS_NETWORK_STATE
+    - FOREGROUND_SERVICE
+    - RECEIVE_BOOT_COMPLETED
+    others: []
+    signature: []
+    signatureOrSystem: []
+  target_sdk: '29'
+  use_cleartext_traffic: false
+  version_code: '95'
+  version_name: 1.0.3
+code_analysis:
+  insecure_certificate_validation: []
+  insecure_random_generator: []
+  insecure_webview_implementation: []
+  ip_disclosure: []
+  remote_webview_debugging: []
+  risky_cryptographic_algorithms:
+    improper_encrypt_functions: []
+    insecure_hash_functions: []
+  sql_hardcoded_secrets: []
+  sql_raw_queries:
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.execSQL
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.execSQL
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.query
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.query
+  trackers: []
+pii_taint_result:
+  leaked_keys: []
+root_analysis:
+  debug_detections: []
+  root_detections: []
+  root_usage: []
+virus_total:
+  md5: 6a0c9753acef2580ff7248a279db14d1
+  permalink: https://www.virustotal.com/gui/file/b385a83b9d598f514e5ada902ddd9016067201ef2c5b3ec64fbfd63636669c02/detection/f-b385a83b9d598f514e5ada902ddd9016067201ef2c5b3ec64fbfd63636669c02-1611292661
+  resource: b385a83b9d598f514e5ada902ddd9016067201ef2c5b3ec64fbfd63636669c02
+  response_code: 1
+  scan_id: b385a83b9d598f514e5ada902ddd9016067201ef2c5b3ec64fbfd63636669c02-1611292661
+  sha1: 1e4be626fed6dd9dc6960dc745eec5082d85b086
+  sha256: b385a83b9d598f514e5ada902ddd9016067201ef2c5b3ec64fbfd63636669c02
+  verbose_msg: Scan request successfully queued, come back later for the report

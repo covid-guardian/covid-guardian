@@ -1,0 +1,87 @@
+app:
+  activities_launch_mode:
+    com.google.android.gms.common.api.GoogleApiActivity: standard
+    com.google.android.play.core.common.PlayCoreDialogWrapperActivity: standard
+    com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity: singleInstance
+    uk.nhs.nhsx.covid19.android.app.MainActivity: standard
+    uk.nhs.nhsx.covid19.android.app.about.MoreAboutAppActivity: standard
+    uk.nhs.nhsx.covid19.android.app.about.UserDataActivity: standard
+    uk.nhs.nhsx.covid19.android.app.availability.AppAvailabilityActivity: standard
+    uk.nhs.nhsx.covid19.android.app.common.EnableBluetoothActivity: standard
+    uk.nhs.nhsx.covid19.android.app.common.EnableExposureNotificationsActivity: standard
+    uk.nhs.nhsx.covid19.android.app.common.EnableLocationActivity: standard
+    uk.nhs.nhsx.covid19.android.app.edgecases.DeviceNotSupportedActivity: standard
+    uk.nhs.nhsx.covid19.android.app.exposure.encounter.EncounterDetectionActivity: standard
+    uk.nhs.nhsx.covid19.android.app.onboarding.DataAndPrivacyActivity: standard
+    uk.nhs.nhsx.covid19.android.app.onboarding.MainOnboardingActivity: standard
+    uk.nhs.nhsx.covid19.android.app.onboarding.PermissionActivity: standard
+    uk.nhs.nhsx.covid19.android.app.onboarding.authentication.AuthenticationCodeActivity: standard
+    uk.nhs.nhsx.covid19.android.app.onboarding.postcode.PostCodeActivity: standard
+    uk.nhs.nhsx.covid19.android.app.qrcode.QrCodeMoreInfoActivity: standard
+    uk.nhs.nhsx.covid19.android.app.qrcode.QrCodeScanResultActivity: standard
+    uk.nhs.nhsx.covid19.android.app.qrcode.QrScannerActivity: standard
+    uk.nhs.nhsx.covid19.android.app.qrcode.riskyvenues.VenueAlertActivity: standard
+    uk.nhs.nhsx.covid19.android.app.questionnaire.review.NoSymptomsActivity: standard
+    uk.nhs.nhsx.covid19.android.app.questionnaire.review.PositiveSymptomsActivity: standard
+    uk.nhs.nhsx.covid19.android.app.questionnaire.review.ReviewSymptomsActivity: standard
+    uk.nhs.nhsx.covid19.android.app.questionnaire.selection.QuestionnaireActivity: standard
+    uk.nhs.nhsx.covid19.android.app.state.IsolationExpirationActivity: standard
+    uk.nhs.nhsx.covid19.android.app.status.StatusActivity: standard
+    uk.nhs.nhsx.covid19.android.app.testordering.TestOrderingActivity: standard
+    uk.nhs.nhsx.covid19.android.app.testordering.TestOrderingProgressActivity: standard
+    uk.nhs.nhsx.covid19.android.app.testordering.TestResultActivity: standard
+  allow_backup: false
+  app_name: NHS Test & Trace
+  debuggable: false
+  min_sdk: '23'
+  package_name: uk.nhs.covid19.production
+  permissions:
+    dangerous:
+    - WAKE_LOCK
+    - BLUETOOTH
+    - INTERNET
+    - CAMERA
+    normal:
+    - ACCESS_NETWORK_STATE
+    - FOREGROUND_SERVICE
+    - RECEIVE_BOOT_COMPLETED
+    others: []
+    signature: []
+    signatureOrSystem: []
+  target_sdk: '29'
+  use_cleartext_traffic: false
+  version_code: '35'
+  version_name: 3.0.0 (35)
+code_analysis:
+  insecure_certificate_validation: []
+  insecure_random_generator:
+  - Lokhttp3/internal/ws/WebSocketWriter;.writeControlFrame
+  insecure_webview_implementation: []
+  ip_disclosure:
+  - '::'
+  remote_webview_debugging: []
+  risky_cryptographic_algorithms:
+    improper_encrypt_functions: []
+    insecure_hash_functions: []
+  sql_hardcoded_secrets: []
+  sql_raw_queries:
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.execSQL
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.execSQL
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.query
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.query
+  trackers: []
+pii_taint_result:
+  leaked_keys: []
+root_analysis:
+  debug_detections: []
+  root_detections: []
+  root_usage: []
+virus_total:
+  md5: 34da20b74c36f2ba1b82f4f892b29212
+  permalink: https://www.virustotal.com/gui/file/f5e93050ccb5e86ebd581c9be7e4ec6e02c94151a9cbe08c2cab7824d20b2a82/detection/f-f5e93050ccb5e86ebd581c9be7e4ec6e02c94151a9cbe08c2cab7824d20b2a82-1611292775
+  resource: f5e93050ccb5e86ebd581c9be7e4ec6e02c94151a9cbe08c2cab7824d20b2a82
+  response_code: 1
+  scan_id: f5e93050ccb5e86ebd581c9be7e4ec6e02c94151a9cbe08c2cab7824d20b2a82-1611292775
+  sha1: 880770cf8ca2d786cb907fd75cae9bf23e2a4acf
+  sha256: f5e93050ccb5e86ebd581c9be7e4ec6e02c94151a9cbe08c2cab7824d20b2a82
+  verbose_msg: Scan request successfully queued, come back later for the report

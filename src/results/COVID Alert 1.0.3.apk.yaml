@@ -1,0 +1,68 @@
+app:
+  activities_launch_mode:
+    app.covidshield.MainActivity: singleTask
+    com.google.android.gms.common.api.GoogleApiActivity: standard
+  allow_backup: false
+  app_name: COVID Alert
+  debuggable: false
+  min_sdk: '23'
+  package_name: ca.gc.hcsc.canada.stopcovid
+  permissions:
+    dangerous:
+    - BLUETOOTH
+    - GET_TASKS
+    - INTERNET
+    - WAKE_LOCK
+    normal:
+    - ACCESS_NETWORK_STATE
+    - FOREGROUND_SERVICE
+    - RECEIVE_BOOT_COMPLETED
+    - ACCESS_WIFI_STATE
+    others: []
+    signature: []
+    signatureOrSystem: []
+  target_sdk: '28'
+  use_cleartext_traffic: false
+  version_code: '74'
+  version_name: 1.0.3
+code_analysis:
+  insecure_certificate_validation: []
+  insecure_random_generator:
+  - Lnet/lingala/zip4j/crypto/AESEncrpyter;.generateSalt
+  - Lokhttp3/internal/ws/WebSocketWriter;.writeControlFrame
+  - Lnet/lingala/zip4j/crypto/StandardEncrypter;.generateRandomBytes
+  insecure_webview_implementation: []
+  ip_disclosure:
+  - '::'
+  - 10.0.3.2
+  - 10.0.2.2
+  remote_webview_debugging: []
+  risky_cryptographic_algorithms:
+    improper_encrypt_functions:
+    - Lcom/reactlibrary/securekeystore/RNSecureKeyStoreModule;.decryptAesCipherText
+    - Lcom/reactlibrary/securekeystore/RNSecureKeyStoreModule;.encryptAesPlainText
+    insecure_hash_functions:
+    - Lcom/facebook/soloader/SoLoader$1;.getLibHash
+    - Lcom/facebook/common/util/SecureHashUtil;.makeSHA1HashBase64
+  sql_hardcoded_secrets: []
+  sql_raw_queries:
+  - Lcom/reactnativecommunity/asyncstorage/ReactDatabaseSupplier;.onCreate
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.execSQL
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.query
+  - Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;.query
+  trackers: []
+pii_taint_result:
+  leaked_keys: []
+root_analysis:
+  debug_detections: []
+  root_detections: []
+  root_usage: []
+virus_total:
+  md5: 112e17392cc2a4766b5c112b9f56c8f7
+  permalink: https://www.virustotal.com/gui/file/4cf20718d7b16e8dfd28d29169648c02755677c3fbd26caafe6499d645a56d99/detection/f-4cf20718d7b16e8dfd28d29169648c02755677c3fbd26caafe6499d645a56d99-1611292737
+  resource: 4cf20718d7b16e8dfd28d29169648c02755677c3fbd26caafe6499d645a56d99
+  response_code: 1
+  scan_id: 4cf20718d7b16e8dfd28d29169648c02755677c3fbd26caafe6499d645a56d99-1611292737
+  sha1: 1e8b8eeeff177e49f0735532912e594d38e3d6c5
+  sha256: 4cf20718d7b16e8dfd28d29169648c02755677c3fbd26caafe6499d645a56d99
+  verbose_msg: Scan request successfully queued, come back later for the report
