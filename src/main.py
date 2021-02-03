@@ -19,7 +19,7 @@ def main():
 
     args = parser.parse_args()
     path = args.path
-    number = args.n
+    number = int(args.n)
     if number == 0:
         number = multiprocessing.cpu_count()
 
