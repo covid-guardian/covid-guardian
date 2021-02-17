@@ -92,7 +92,7 @@ Then the server will run on the port 5000. Please visit http://localhost:5000 to
 ## Output
 The evaluation results will be output in a `yaml` file named by the apk filename, e.g., `COVID Alert 1.0.3.apk.yaml`. There are 5 categories of testing items:
 * `app` presents the apk information extracted from the `AndroidManifast.xml` file, which includes
- * `activities_launch_mode`:
+** `activities_launch_mode`:
  * `allow_backup`:
  * `app_name`:
  * `debuggable`:
