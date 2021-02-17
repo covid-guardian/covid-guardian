@@ -88,3 +88,43 @@ You can run the web server by running the script ```server.sh```:
 ```
 
 Then the server will run on the port 5000. Please visit http://localhost:5000 to open the front page.
+
+## Output
+The evaluation results will be output in a `yaml` file named by the apk filename, e.g., `COVID Alert 1.0.3.apk.yaml`. There are 5 categories of testing items:
+* `app` presents the apk information extracted from the `AndroidManifast.xml` file, which includes
+ * `activities_launch_mode`:
+ * `allow_backup`:
+ * `app_name`:
+ * `debuggable`:
+ * `min_sdk`:
+ * `package_name`:
+ * `permissions`:
+ * `target_sdk`:
+ * `use_cleartext_traffic`:
+ * `version_code`:
+ * `version_name`:
+* `code_analysis`
+ * `insecure_certificate_validation`:
+ * `insecure_random_generator`:
+ * `insecure_webview_implementation`:
+ * `ip_disclosure`:
+ * `remote_webview_debugging`:
+ * `risky_cryptographic_algorithms`:
+ * `sql_hardcoded_secrets`:
+ * `sql_raw_queries`:
+ * `trackers`:
+* `pii_taint_result`
+ * `leaked_keys`:
+* `root_analysis`
+ * `debug_detections`:
+ * `root_detections`:
+ * `root_usage`: 
+* `virus_total`
+ * `md5`:
+ * `permalink`:
+ * `resource`:
+ * `response_code`:
+ * `scan_id`:
+ * `sha1`:
+ * `sha256`:
+ * `verbose_msg`: 
