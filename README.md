@@ -88,3 +88,6 @@ You can run the web server by running the script ```server.sh```:
 ```
 
 Then the server will run on the port 5000. Please visit http://localhost:5000 to open the front page.
+
+## Examples
+Here we demonstrate an example report to explain every parameter. 
