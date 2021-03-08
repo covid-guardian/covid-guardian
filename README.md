@@ -116,7 +116,7 @@ The evaluation results will be output in a `yaml` file named by the apk filename
   * `use_cleartext_traffic`: If this value is true, the app allows network connections to transfer plain text though the Internet without encryption.
   * `version_code`: Version code, e.g. 10.
   * `version_name`: Version name, e.g. 1.0.2.
-* `code_analysis` Code analysis. Each section provide a list of correspondence classes.
+* `code_analysis` Code analysis. Each section provides a list of correspondence classes.
   * `insecure_certificate_validation`: Insecure Implementation of SSL. Trusting all the certificates or accepting self-signed certificates is a critical Security Hole. This application is vulnerable to MITM attacks
   * `insecure_random_generator`: The App uses an insecure Random Number Generator.
   * `insecure_webview_implementation`: Insecure WebView Implementation. Execution of user controlled code in WebView is a critical Security Vulnerability.
@@ -133,11 +133,11 @@ The evaluation results will be output in a `yaml` file named by the apk filename
   * `root_detections`: Root detection
   * `root_usage`: Execute root permission
 * `virus_total` Information from VirusTotal
-  * `md5`:
-  * `permalink`:
-  * `resource`:
-  * `response_code`:
-  * `scan_id`:
-  * `sha1`:
-  * `sha256`:
-  * `verbose_msg`: 
+  * `md5`: md5 value of uploaded file
+  * `permalink`: the link to the webpage of results 
+  * `resource`: resource id. This id is used in other APIs, such as report downloading.
+  * `response_code`: response code of the VirusTotal server
+  * `scan_id`: scan id given by the VirusTotal server. 
+  * `sha1`: sha1 value of uploaded file
+  * `sha256`: sha256 value of uploaded file
+  * `verbose_msg`: message given by the VirusTotal server 
